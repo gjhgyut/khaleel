@@ -1,0 +1,329 @@
+/* КЕРЕМЕТ ГУГЛ ҚАРИПТЕРІН ҚОСУ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* ЖАЛПЫ БАПТАУЛАР */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.9;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfbfa; /* Жұмсақ піл сүйегі түсі */
+    color: #1e293b;
+}
+
+/* ОҚУ ПРОГРЕСІНІҢ СЫЗЫҒЫ (PROGRESS BAR) */
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255,255,255,0.1);
+    z-index: 9999;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #d4af37, #f39c12);
+    transition: width 0.1s ease-out;
+}
+
+/* ХЕДЕР — АРИСТОКРАТИЯЛЫҚ ГРАДИЕНТ */
+header {
+    background: linear-gradient(135deg, #09152a, #112240, #1a365d);
+    color: white;
+    text-align: center;
+    padding: 7rem 1rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.header-overlay {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header-tag {
+    background-color: rgba(212, 175, 55, 0.2);
+    color: #d4af37;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.4);
+}
+
+header p {
+    font-size: 1.35rem;
+    opacity: 0.85;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+/* СТИЛЬДІ ЖАБЫСПАЛЫ МӘЗІР (STICKY NAV) */
+nav {
+    background-color: #0a192f;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 5000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #d4af37;
+}
+
+nav a {
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 22px 32px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+nav a:hover, nav a.active {
+    color: #d4af37;
+    background-color: #112240;
+}
+
+/* КОНТЕЙНЕР ДИЗАЙНЫ */
+.container {
+    max-width: 1050px;
+    margin: 50px auto;
+    padding: 50px 60px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+/* HERO СЕКЦИЯ */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.hero-image img {
+    max-width: 280px;
+    height: auto;
+    border-radius: 14px;
+    border: 4px solid #d4af37;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    color: #0f172a;
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+.hero-text p {
+    text-align: justify;
+    color: #475569;
+    font-size: 1.1rem;
+}
+
+/* БАТЫРМА СТИЛЬДЕРІ */
+.btn-primary {
+    background: #0a192f;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #d4af37;
+    color: #0a192f;
+    transform: translateY(-2px);
+}
+
+/* ТАҚЫРЫПТАР МЕН СЫЗЫҚТАР */
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #0a192f;
+    font-size: 2rem;
+    border-left: 6px solid #d4af37;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.15rem;
+    color: #334155;
+    margin-bottom: 25px;
+}
+
+.styled-hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    margin: 50px 0;
+}
+
+/* ГРИД КАРТОЧКАЛАРЫ */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    border-top: 6px solid #0a192f;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-top-color: #d4af37;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #0a192f;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* БАТЫЛ ЦИТАТАЛАР (QUOTE) */
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    background: #f8fafc;
+    border-left: 6px solid #d4af37;
+    padding: 30px;
+    margin: 40px 0;
+    font-size: 1.3rem;
+    color: #1e293b;
+    border-radius: 0 12px 12px 0;
+    box-shadow: inset 10px 0 20px rgba(0,0,0,0.01);
+}
+
+/* ИНФО-БЛОКТАР */
+.info-block {
+    background-color: #f1f5f9;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 35px 0;
+    border-right: 6px solid #0a192f;
+}
+
+.info-block h3 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 0;
+    color: #0a192f;
+    font-size: 1.35rem;
+}
+
+/* ТІЗІМДЕР МЕН СІЛТЕМЕЛЕР */
+.books-list {
+    padding-left: 25px;
+}
+
+.books-list li {
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+    color: #334155;
+}
+
+.wiki-link {
+    color: #0a192f;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid #d4af37;
+    transition: all 0.3s ease;
+}
+
+.wiki-link:hover {
+    color: #d4af37;
+    background-color: #f8fafc;
+}
+
+/* ИНТЕРАКТИВТІ ПАНЕЛЬ */
+.interactive-panel {
+    background: linear-gradient(135deg, #fef08a, #fef9c3);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    border: 1px solid #fef08a;
+}
+.interactive-panel h3 {
+    margin-top: 0;
+    color: #854d0e;
+}
+
+/* ФУТЕР ДИЗАЙНЫ */
+footer {
+    text-align: center;
+    padding: 35px;
+    background-color: #0a192f;
+    color: #94a3b8;
+    margin-top: 80px;
+    border-top: 4px solid #d4af37;
+    font-weight: 500;
+}
+
+/* РЕМАППИНГ (АДАПТИВТІЛІК) */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .container {
+        padding: 30px;
+        margin: 20px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        text-align: center;
+        padding: 15px;
+    }
+}
